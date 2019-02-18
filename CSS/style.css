@@ -1,0 +1,36 @@
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .welcome {
+        background: url('../Imgs/art1.png') no-repeat;
+        background-size: cover;
+        height: 100vh;
+    }
+    
+    .link1 {
+        cursor: pointer;
+        text-decoration: none;
+        border: 3px #707070 solid;
+        border-radius: 34px;
+        display: inline-block;
+        margin-top: 30%;
+        margin-left: 75%;
+        padding-left: 2%;
+        padding-right: 2%;
+        text-align: center;
+        font-family: 'Segoe UI';
+        font-size: 25px;
+    }
+    
+    .container1 :hover {
+        background-color: #707070;
+        color: white;
+        transition-duration: 0.6s;
+    }
+    
+    a {
+        text-decoration: none;
+        color: #707070;
+    }
