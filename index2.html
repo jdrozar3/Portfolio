@@ -16,7 +16,7 @@
 
     <link rel="stylesheet" href="CSS/style2.css">
 
-    <title>Jyoti Rozario Portfolio</title>
+    <title>Jyoti Rozario</title>
 </head>
 
 <body>
@@ -30,18 +30,23 @@
             <p>WELCOME</p>
         </div>
     </div>
+    <div class="buttoncontrol">
+        <label id="lab" class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+        </label>
+    </div>
+
 
 
     <div class="nav">
         <ul style="list-style: none;">
-            <a href="#boxes">
+            <a href="#Projects">
                 <li class="list1">Projects</li>
             </a>
-            <a class="links" href="./index3.html">
-                <li class="list2">Resume</li>
-            </a>
+
             <a href="#heart">
-                <li class="list">Hire Me!</li>
+                <li id="hide2" class="list">Hire Me!</li>
             </a>
         </ul>
     </div>
@@ -49,12 +54,13 @@
         <div class="quote">
             <div class="hide">
                 <p>
-                    <em>"Try not to become a man of success. Rather become a man of value."<br/>
+                    <em>"Try not to become a man of success. Rather become a man of value."<br />
 
                     </em> --<strong> Albert Einstein</strong>
                 </p>
             </div>
         </div>
+
         <div>
             <div class="container">
 
@@ -109,13 +115,13 @@
 
 
                 <div class="containerbig">
-                    <div class="card1">
+                    <div id="Projects" class="card1">
 
                         <img class="img-rounded img-responsive" src="./Imgs/pic3.png">
                         <div class="para">
                             <h2>Memory Game</h2>
                             <p>HTML CSS JavaScript</p>
-                            <button class="btn btn-danger btn-lg">GitHub</button>
+                            <a href="https://github.com/jdrozar3/Memory-Game-"><button class="btn btn-danger btn-lg">GitHub</button></a>
                         </div>
                     </div>
 
@@ -198,7 +204,7 @@
                         </div>
                     </div>
                 </div>
-                <div id="boxes" class="containerbig">
+                <div class="containerbig">
 
                     <div class="card1">
 
@@ -220,7 +226,7 @@
         <div id="footer" class="foot">
             <div class="contactinfo">
                 <div>
-                    <p>Designed and Coded with <i id="heart" class="fa fa-heart"></i><br/> by Me</p>
+                    <p>Designed and Coded with <i id="heart" class="fa fa-heart"></i><br /> by Me</p>
                 </div>
                 <p>Email : <a href="#">rozariomichael473@gmail.com</a></p>
 
@@ -233,6 +239,9 @@
             </div>
         </div>
         <script src="./JS/script.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
 </body>
 
 </html>
