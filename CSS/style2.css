@@ -1,14 +1,90 @@
-    * {
+       * {
         margin: 0;
         padding: 0;
     }
-    
+
     body {
-        background: url("../Imgs/art2.png") no-repeat;
+        background: url("../Imgs/artnew.png") no-repeat;
         background-size: cover;
         height: 100vh;
     }
-    
+
+    .back {
+        background: url("./Imgs/art2.png") no-repeat;
+    }
+
+    .titletag {
+        font-family: coiny;
+    }
+
+    /*slider button*/
+
+    .buttoncontrol {
+        position: relative;
+        transform: translate(90%, -250%)
+    }
+
+    .switch {
+        position: relative;
+        display: inline-block;
+        width: 60px;
+        height: 34px;
+    }
+
+    .switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #ccc;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    .slider:before {
+        position: absolute;
+        content: "";
+        height: 26px;
+        width: 26px;
+        left: 4px;
+        bottom: 4px;
+        background-color: white;
+        -webkit-transition: .4s;
+        transition: .4s;
+    }
+
+    input:checked+.slider {
+        background-color: black;
+    }
+
+    input:focus+.slider {
+        box-shadow: 0 0 1px black;
+    }
+
+    input:checked+.slider:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+    }
+
+    /* Rounded sliders */
+
+    .slider.round {
+        border-radius: 34px;
+    }
+
+    .slider.round:before {
+        border-radius: 50%;
+    }
+
     .quote {
         position: relative;
         transform: translate(0%, 375%);
@@ -17,22 +93,22 @@
         text-align: center;
         width: 100%;
     }
-    
+
     em {
         font-family: Pacifico;
     }
-    
+
     .hide {
         display: hidden;
     }
-    
+
     .container {
         transform: translate(0%, 100%);
         position: relative;
         align-content: center;
         width: 80%;
     }
-    
+
     .header {
         font-family: coiny;
         align-content: center;
@@ -45,47 +121,64 @@
         animation-name: logo;
         animation-duration: 1.5s;
     }
-    
+
     @keyframes logo {
         from {
-            border: 4px solid black;
+
             font-size: 0px;
         }
+
         to {
-            border: 0px solid black;
+
             font-size: 30px;
         }
     }
-    
+
     .header2 {
         text-align: center;
         font-family: coiny;
         font-size: 65px;
     }
-    
+
     .hidehead {
         display: hidden;
     }
-    
+
     ul li {
-        width: 85px;
+        width: 180px;
+        height: 70px;
+        padding-top: 15px;
         text-align: center;
         display: inline-block;
         border: 2px solid black;
         border-radius: 4px;
-        font-size: 20px;
+        font-size: 25px;
         margin-left: 20px;
         color: black;
         list-style: none;
         font-family: 'Segoe UI';
         position: relative;
-        transform: translate(250%, 400%);
+        transform: translate(150%, 150%);
         cursor: pointer;
         transition-duration: 0.2s;
+        animation: float 2.5s ease-in-out infinite;
     }
-    
+
+    @keyframes float {
+        from {
+            transform: translate(150%, 150%);
+        }
+
+        65% {
+            transform: translate(150%, 115px);
+        }
+
+        to {
+            transform: translate(150%, 150%);
+        }
+    }
+
     .list {
-        transform: translate(500%, 150%);
         border: 2px solid white;
         padding-top: 15px;
         width: 180px;
@@ -93,29 +186,47 @@
         color: white;
         transition-duration: 0.25s;
         font-size: 25px;
+        animation-name: floating;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-timing-function: ease-in-out;
     }
-    
+
+    @keyframes floating {
+        from {
+            transform: translate(500%, 150%);
+        }
+
+        65% {
+            transform: translate(500%, 115px);
+        }
+
+        to {
+            transform: translate(500%, 150%);
+        }
+    }
+
     .list:hover {
         background-color: white;
         color: black;
         text-decoration: none;
         box-shadow: 0 8px 10px 0 black;
     }
-    
+
     .list1:hover {
         background-color: black;
         color: white;
         text-decoration: none;
         box-shadow: 0 8px 10px 0 black;
     }
-    
+
     .list2:hover {
         background-color: black;
         color: white;
         text-decoration: none;
         box-shadow: 0 8px 10px 0 black;
     }
-    
+
     .card1 {
         height: 350px;
         width: 250px;
@@ -127,43 +238,114 @@
         transform: translate(65%, 250%);
         position: relative;
     }
-    
+
     .card1:hover {
         box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.842);
     }
-    
+
     .maincontainer {
         display: inline-grid;
         grid-template-columns: auto auto auto auto;
         grid-column-gap: 55px;
         grid-row-gap: 50px;
     }
-    
+
+    /*responsive*/
+    @media only screen and (min-width:360px) and (max-width:1080px) {
+        body {
+            background-size: contain;
+        }
+
+        .header2 {
+            font-size: 20px;
+            margin-top: 15%;
+        }
+
+
+        .hide {
+            width: 100%;
+            font-size: 20px;
+        }
+
+        .buttoncontrol {
+            display: none;
+        }
+
+        .maincontainer {
+            display: flex;
+            flex-flow: wrap column;
+
+        }
+
+        .containerbig {
+            margin-left: -20%;
+            margin-top: 5%;
+
+        }
+
+        .card1 {
+            width: 50%;
+        }
+
+        .list1 {
+            margin-left: -50%;
+        }
+
+        #hide2 {
+            color: black;
+            margin-left: -225%;
+            position: relative;
+            display: flex;
+            flex-flow: wrap column;
+            margin-top: 15%;
+            border: 2px solid black;
+
+
+        }
+
+        .header {
+            font-size: 40px;
+            transform: translate(-60%, -5%);
+            animation-name: logo;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes logo {
+            from {
+                font-size: 0px;
+            }
+
+            to {
+                font-size: 40px;
+            }
+        }
+    }
+
     .foot {
         background-color: rgba(0, 0, 0, 0.89);
         transform: translate(0%, 250%);
         height: 400px;
         max-width: 100%;
     }
-    
+
     a {
         text-decoration: none;
     }
-    
+
     .para {
         text-align: center;
     }
-    
+
     button {
         margin-top: 25px;
     }
-    
+
     .icons {
         font-size: 25px;
         transform: translate(0%, 600%);
         text-align: center;
     }
-    
+
     .contactinfo {
         color: white;
         font-size: 15px;
@@ -171,7 +353,7 @@
         position: relative;
         transform: translate(0%, 200%);
     }
-    
+
     #heart {
         color: red;
     }
