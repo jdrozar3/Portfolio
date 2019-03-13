@@ -1,4 +1,4 @@
-      * {
+    * {
   margin: 0;
   padding: 0;
 }
@@ -26,6 +26,10 @@ body {
   width: 100%;
 }
 
+.logos {
+  width: 00px;
+  height: 150px;
+}
 em {
   font-family: Pacifico;
 }
@@ -192,15 +196,21 @@ ul li {
 .maincontainer {
   display: inline-grid;
   grid-template-columns: auto auto auto auto;
-  grid-column-gap: 55px;
+  grid-column-gap: 10px;
   grid-row-gap: 50px;
-  transform: translate(14%, 115%);
+  transform: translate(0%, 112%);
   position: relative;
+  width: 100%;
+  padding-left: 8%;
+  padding-top: -10%;
+  background: rgb(245, 242, 242);
+  overflow: visible;
 }
 
 .foot {
   background-color: rgba(0, 0, 0, 0.89);
   transform: translate(0%, 250%);
+  position: relative;
   height: 400px;
   max-width: 100%;
 }
@@ -277,19 +287,24 @@ button {
   }
 
   .maincontainer {
-    display: flex;
-    flex-flow: wrap column;
+    display: grid;
+    grid-template-columns: auto;
+    position: relative;
+    transform: translate(2%, 25%);
+    background: none;
+    width: 100%;
   }
 
   .containerbig {
-    margin-left: -20%;
     margin-top: 5%;
   }
 
   .card1 {
-    width: 50%;
+    width: 85%;
   }
-
+  .fa-superpowers {
+    font-size: 20px;
+  }
   .list1 {
     margin-left: -50%;
     border: 2px solid black;
@@ -317,7 +332,7 @@ button {
 
   .header {
     font-size: 40px;
-    transform: translate(-60%, -5%);
+    transform: translate(-70%, -20%);
     animation-name: logo;
     animation-duration: 1.5s;
   }
