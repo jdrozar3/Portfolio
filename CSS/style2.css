@@ -1,8 +1,7 @@
-    * {
+   * {
   margin: 0;
   padding: 0;
 }
-
 body {
   background: url("../Imgs/art100.png") no-repeat;
   background-size: cover;
@@ -24,6 +23,29 @@ body {
   font-size: 30px;
   text-align: center;
   width: 100%;
+}
+.gallery {
+  font-family: Pacifico;
+  font-size: 40px;
+  text-align: center;
+  padding-top: 1%;
+  background: white;
+  color: black;
+  width: 300px;
+  height: 100px;
+  position: relative;
+  transform: translate(200%, 650%);
+  box-shadow: 0 8px 10px 0;
+  transition-duration: 0.4s;
+}
+.gallery:hover {
+  color: white;
+  background: black;
+  box-shadow: 0 0 0 0;
+}
+
+.anchor {
+  text-decoration: none;
 }
 
 .logos {
@@ -179,6 +201,13 @@ ul li {
   box-shadow: 0 8px 10px 0 black;
 }
 
+.headings {
+  font-family: coiny;
+  font-size: 50px;
+
+  position: relative;
+  transform: translate(45%, 1800%);
+}
 .card1 {
   height: 350px;
   width: 250px;
