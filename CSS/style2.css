@@ -1,4 +1,4 @@
-   * {
+  * {
   margin: 0;
   padding: 0;
 }
@@ -7,7 +7,9 @@ body {
   background-size: cover;
   height: 100vh;
 }
-
+.backmusic {
+  display: ;
+}
 .back {
   background: url("./Imgs/art2.png") no-repeat;
 }
@@ -23,6 +25,14 @@ body {
   font-size: 30px;
   text-align: center;
   width: 100%;
+}
+#can {
+  border: 0px solid white;
+  box-shadow: 0 8px 10px 0 black;
+  width: 80%;
+  height: 50%;
+  position: relative;
+  transform: translate(12.5%, 100%);
 }
 .gallery {
   font-family: Pacifico;
@@ -227,7 +237,7 @@ ul li {
   grid-template-columns: auto auto auto auto;
   grid-column-gap: 10px;
   grid-row-gap: 50px;
-  transform: translate(0%, 112%);
+  transform: translate(0%, 75%);
   position: relative;
   width: 100%;
   padding-left: 8%;
